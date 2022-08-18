@@ -11,6 +11,17 @@
     "adapt-plugin",
     "adapt-extension"
   ],
+  "displayName": "Drawer",
+  "extension": "drawer",
+  "targetAttribute": "_drawer",
+  "main": "/js/adapt-contrib-drawer.js",
+  "adapt_framework": {
+    "compilationMap": {
+      "core/js/views/drawerItemView": "adapt-contrib-drawer/js/DrawerItemView",
+      "core/js/views/drawerView": "adapt-contrib-drawer/js/DrawerView",
+      "core/js/drawer": "adapt-contrib-drawer/js/drawer"
+    }
+  },
   "license": "GPL-3.0",
   "bugs": "https://github.com/adaptlearning/adapt-contrib-drawer/issues",
   "private": true,

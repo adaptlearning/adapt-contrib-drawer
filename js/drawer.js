@@ -1,5 +1,5 @@
 import Adapt from 'core/js/adapt';
-import DrawerView from 'core/js/views/drawerView';
+import DrawerView from './DrawerView';
 
 const DrawerCollection = new Backbone.Collection(null, { comparator: 'drawerOrder' });
 const Drawer = {};
