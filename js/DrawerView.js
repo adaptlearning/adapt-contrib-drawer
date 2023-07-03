@@ -114,7 +114,7 @@ class DrawerView extends Backbone.View {
   }
 
   showDrawer(emptyDrawer) {
-    this.$el.removeClass('u-display-none').removeAttr('aria-hidden');
+    this.$el.removeClass('u-display-none').removeAttr('aria-hidden').attr('aria-expanded');
     // Only trigger popup:opened if drawer is visible, pass popup manager drawer element
     if (!this._isVisible) {
       Adapt.a11y.popupOpened(this.$el);
@@ -205,7 +205,8 @@ class DrawerView extends Backbone.View {
       this.$el
         .css(direction)
         .addClass('u-display-none')
-        .attr('aria-hidden', 'true');
+        .attr('aria-hidden', 'true')
+        .removeAttr('aria-expanded');
 
       $('.js-shadow').addClass('u-display-none');
 
@@ -218,7 +219,8 @@ class DrawerView extends Backbone.View {
       this.$el.velocity(direction, this.drawerDuration, easing, () => {
         this.$el
           .addClass('u-display-none')
-          .attr('aria-hidden', 'true');
+          .attr('aria-hidden', 'true')
+          .removeAttr('aria-expanded');
 
         Adapt.trigger('drawer:closed');
       });
