@@ -206,7 +206,7 @@ class DrawerView extends Backbone.View {
         .css(direction)
         .addClass('u-display-none')
         .attr('aria-hidden', 'true')
-        .removeAttr('aria-expanded');
+        .attr('aria-expanded', 'false');
 
       $('.js-shadow').addClass('u-display-none');
 
