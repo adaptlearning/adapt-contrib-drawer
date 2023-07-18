@@ -220,7 +220,7 @@ class DrawerView extends Backbone.View {
         this.$el
           .addClass('u-display-none')
           .attr('aria-hidden', 'true')
-          .removeAttr('aria-expanded');
+          .attr('aria-expanded', 'false');
 
         Adapt.trigger('drawer:closed');
       });
