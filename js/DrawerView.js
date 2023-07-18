@@ -114,7 +114,7 @@ class DrawerView extends Backbone.View {
   }
 
   showDrawer(emptyDrawer) {
-    this.$el.removeClass('u-display-none').removeAttr('aria-hidden').attr('aria-expanded');
+    this.$el.removeClass('u-display-none').removeAttr('aria-hidden').attr('aria-expanded', 'true');
     // Only trigger popup:opened if drawer is visible, pass popup manager drawer element
     if (!this._isVisible) {
       Adapt.a11y.popupOpened(this.$el);
